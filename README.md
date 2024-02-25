@@ -6,4 +6,5 @@ And helps you to block distractions.
 This script based on bash shell. You can check if you are using bash or not with this commend:
 > $ which bash
 
-if output of commend is: `/usr/bin/bash` that means you are using bash. 
+if output of commend is: `/usr/bin/bash` that means you are using bash. For adding a website for blocking , add `"your website"` to `websites` array in script. It will generate a block state for each ip and website in `websites` array.
+
