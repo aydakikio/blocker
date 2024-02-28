@@ -1,9 +1,8 @@
 #!/usr/bin/bash
 
 status="$1"
-timer="$2"
 blocklist=()
-websites=("www.zoomg.ir" "www.ninisite.com" "www.zoomit.ir" )
+websites=( )
 ips=()
 current_ip=$(ifconfig | grep 'inet ' | awk '{print $2}')
 
