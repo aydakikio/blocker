@@ -1,13 +1,23 @@
 # First look 
-blocker is a useful tool for blocking certain websites on linux operating system. I allows you to block certain websites for all ips in `ifconfig`.
-And helps you to block distractions.
+blocker is a useful tool for blocking certain websites on linux operating system. It allows you to block certain websites for all ips in `ifconfig`.
 
-# How to setup
+# Requirements
 This script based on bash shell. You can check if you are using bash or not with this commend:
 > $ which bash
 
-if output of commend is: `/usr/bin/bash` that means you are using bash. For adding a website for blocking , add `"www.website address"` to `websites` array in script. It will generate a block state for each ip and website in `websites` array. Each block state will add to `/etc/host/` file.
+if output of commend is: `/usr/bin/bash` that means you are using bash.
 
+
+# How to setup
+For adding a website for blocking , add `"www.website address"` to `websites` array in script. It will generate a block state for each ip and website in `websites` array. Each block state will add to `/etc/host/` file. 
+
+For editing the script run this commend on terminal:
+
+> $ nano blocker.sh
+
+You can fill `nano` with your favourite text editor.
+
+And then add your websites to 
 
 > [!WARNING]
 >  please don't insert websites with `https://` or `http://` prefixes. This method will not working with these prefixes.
@@ -15,3 +25,19 @@ if output of commend is: `/usr/bin/bash` that means you are using bash. For addi
 
 > [!TIP]
 > If your website address does not `www` prexfix  please add your website as `"www.website address   website address"` to websites array in script.
+
+For making the script excecutable you must go to the directory that `blocker.sh` exist and  run this commend: 
+
+> $chmod +x ./blocker.sh
+
+For starting blocking run this commend in terminal:
+
+> $./blocker.sh web_block
+
+This will add your blocked websites to `/etc/hosts`. For unblocking websites run this commend in terminal:
+
+> $./blocker.sh web_unlock
+
+> [!WARNING]
+> The `web_unlock` commend will only remove the blocked from end of file.
+
