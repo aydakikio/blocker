@@ -11,13 +11,12 @@ if output of commend is: `/usr/bin/bash` that means you are using bash and you c
 # How to setup
 For adding a website for blocking , add `"www.website address"` to `websites` array in script. It will generate a block state for each ip and website in `websites` array. Each block state will add to `/etc/hosts/` file later. 
 
-For editing the script run this commend on terminal:
+For editing the script run this commend on terminal and add websites to `websites` array in script:
 
 > $ nano blocker.sh
 
 You can fill `nano` with your favourite text editor.
 
-then you can add  websites to `websites` array in script.
 
 > [!WARNING]
 >  please don't insert websites with `https://` or `http://` prefixes. This method will not working with these prefixes.
